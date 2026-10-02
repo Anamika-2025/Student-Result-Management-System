@@ -1,0 +1,9 @@
+const express = require('express');
+const router = express.Router();
+const subjectController = require('../controllers/subjectController');
+
+router.post('/', subjectController.addSubject);
+router.get('/', subjectController.getAllSubjects);
+router.put('/:id', subjectController.updateSubject);
+
+module.exports = router;
